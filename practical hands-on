@@ -12,7 +12,7 @@ we need to implement CI/CD for the above application.
 
 localhost:5000(voting) , localhost:5001(result) ---> we opened these ports in docker-compose.yml
 
-we can deploy vote,result,worker microservices independently thats how microservices will work even if one microservice is disturbed it wont affect others.
+we can deploy vote,result,worker microservices independently thats how microservices will work even if this microservice is disturbed it wont affect others.
 
 
 
