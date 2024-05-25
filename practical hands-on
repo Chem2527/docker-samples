@@ -10,4 +10,6 @@ one microservice named worker which is written in .net
 and we have two databases one is in-memory data store and other is database.
 we need to implement CI/CD for the above application.
 
+localhost:5000(voting) , localhost:5001(result)
+
 
