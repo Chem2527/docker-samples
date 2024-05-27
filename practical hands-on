@@ -15,4 +15,11 @@ localhost:5000(voting) , localhost:5001(result) ---> we opened these ports in do
 we can deploy vote,result,worker microservices independently thats how microservices will work even if one microservice is disturbed it wont affect others.
 
 
+Task:
+
+create dockerfile for python(vote),dotnet(worker) and nodejs(result) microservices.
+
+lets take result as an example
+
+package
 
