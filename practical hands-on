@@ -21,5 +21,10 @@ create dockerfile for python(vote),dotnet(worker) and nodejs(result) microservic
 
 lets take result as an example
 
-package
+package.json , package-lock.json and server.js node.js applications use these.
 
+package.json file is essential in a Node.js project. It holds various metadata relevant to the project and is used to manage the project's dependencies, scripts, version, and other information.
+
+The package-lock.json file is automatically generated when you run npm install.
+
+server.js file is typically the entry point for your Node.js application. It contains the code to set up and start your server.
