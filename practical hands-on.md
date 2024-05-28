@@ -60,6 +60,9 @@ EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["node", "server.js"]
+
+note: its good if we place Dockerfile under root level of result microservice.
+
 ###########################################################################################################
 
 
