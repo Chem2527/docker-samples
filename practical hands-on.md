@@ -7,7 +7,7 @@ one microservice named vote which is written in python
 one microservice named result which is written in node.js
 one microservice named worker which is written in .net
 
-and we have two databases one is in-memory data store and other is database.
+and we have two databases one is in-memory data store (redis) Redis is an open source key-value store that functions as a data structure server. and other is database(postgresql)  open-source database that stores and manages data for applications..
 we need to implement CI/CD for the above application.
 
 localhost:5000(voting) , localhost:5001(result) ---> we mentioned  these ports in docker-compose.yml and we need to open these ports in hosting resource.
@@ -65,5 +65,7 @@ note: its good if we place Dockerfile under root level of result microservice.
 
 ###########################################################################################################
 create a project (voting-application) and visiblity ---> private
+import the code from github  to azure repos (https://github.com/Chem2527/docker-samples.git)
+
 
 
