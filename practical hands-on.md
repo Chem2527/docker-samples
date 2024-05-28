@@ -67,5 +67,7 @@ note: its good if we place Dockerfile under root level of result microservice.
 create a project (voting-application) and visiblity ---> private
 import the code from github  to azure repos (https://github.com/Chem2527/docker-samples.git)
 
+we have two branches dummy,main intentionally i maked dummy as default branch so that we will learn how to set the default branch in azure repos.
+go to branches --> click on main ---> click on set as default branch.
 
 
