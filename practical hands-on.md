@@ -33,22 +33,22 @@ server.js file is typically the entry point for your Node.js application. It con
 
 FROM node:18-slim
 
-# add curl for healthcheck
+ add curl for healthcheck
 RUN apt-get update && \
     apt-get install -y --no-install-recommends curl tini && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/local/app #(sets the working directory inside the container)
 
-#  nodemon  automatically restarts the node application whenever there is change in source code 
+  nodemon  automatically restarts the node application whenever there is change in source code 
 
 RUN npm install -g nodemon
 
-# copying all files inside package to the present working directory which /usr/local/app
+ copying all files inside package to the present working directory which /usr/local/app
 
 COPY package*.json ./
 
-# install dependencies which are mentioned package-lock.json and clears the npm cache which reduces image size 
+ install dependencies which are mentioned package-lock.json and clears the npm cache which reduces image size 
 RUN npm ci && \
  npm cache clean --force && \
  mv /usr/local/app/node_modules /node_modules
