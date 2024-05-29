@@ -72,6 +72,15 @@ go to branches --> click on main ---> click on set as default branch.
 
 create a docker image and push it to the acr(azure container registry).
 
+create a pipeline for results microservice
+
+Sai2024 - acr name - rg - cicd
+image name : votingapplication
+Dockerfile:   $(Build.SourcesDirectory)/result/Dockerfile
+
+error: 
+Failed to create an app in Microsoft Entra. Error: Insufficient privileges to complete the operation in Microsoft Graph Ensure that the user has permissions to create a Microsoft Entra Application.
+
 
 
 
