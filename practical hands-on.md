@@ -25,41 +25,10 @@ The package-lock.json file is automatically generated when you run npm install.
 
 server.js file is typically the entry point for your Node.js application. It contains the code to set up and start your server.
 
-# Dockerfile for result
 
-FROM node:18-slim
-
- add curl for healthcheck
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl tini && \
-    rm -rf /var/lib/apt/lists/*
-
-WORKDIR /usr/local/app #(sets the working directory inside the container)
-
-  nodemon  automatically restarts the node application whenever there is change in source code 
-
-RUN npm install -g nodemon
-
- copying all files inside package to the present working directory which /usr/local/app
-
-COPY package*.json ./
-
- install dependencies which are mentioned package-lock.json and clears the npm cache which reduces image size 
-RUN npm ci && \
- npm cache clean --force && \
- mv /usr/local/app/node_modules /node_modules
-
-COPY . .
-
-ENV PORT 80
-EXPOSE 80
-
-ENTRYPOINT ["/usr/bin/tini", "--"]
-CMD ["node", "server.js"]
 
 note: its good if we place Dockerfile under root level of result microservice.
 
-###########################################################################################################
  create a project (voting-application) and visiblity ---> private
 import the code from github  to azure repos (https://github.com/Chem2527/docker-samples.git)
 
