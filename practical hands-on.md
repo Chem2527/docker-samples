@@ -1,23 +1,19 @@
 
-Task
+# Scenario: Development team gave us the multiple microservices architecture application.
 
-Development team gave us the multiple microservices architecture application.
+one microservice named vote which is written in python , one microservice named result which is written in node.js
+one microservice named worker which is written in .net and we have two databases one is in-memory data store (redis) Redis is an open source key-value store that functions as a data structure server and other is database(postgresql)  open-source database that stores and manages data for applications..
 
-one microservice named vote which is written in python 
-one microservice named result which is written in node.js
-one microservice named worker which is written in .net
-
-and we have two databases one is in-memory data store (redis) Redis is an open source key-value store that functions as a data structure server. and other is database(postgresql)  open-source database that stores and manages data for applications..
 we need to implement CI/CD for the above application.
 
 localhost:5000(voting) , localhost:5001(result) ---> we mentioned  these ports in docker-compose.yml and we need to open these ports in hosting resource.
 
-we can deploy vote,result,worker microservices independently thats how microservices will work even if one microservice is disturbed it wont affect others.
+we have to deploy  vote,result,worker microservices independently thats how microservices will work and  even if one microservice is disturbed it wont affect others.
 
 
-Task:
+# Task: create dockerfile for python(vote),dotnet(worker) and nodejs(result) microservices.
 
-create dockerfile for python(vote),dotnet(worker) and nodejs(result) microservices.
+
 
 lets take result as an example
 
