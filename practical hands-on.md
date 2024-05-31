@@ -89,6 +89,60 @@ In order to implement this we need to follow path based triggering.
 dockerregistryServiceConnection: it integrates  acr with azuredevops.
 
 # CI pipeline for result microservice 
+#docker
+#Build and push an image to Azure Container Registry
+#https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+ paths:
+   include:
+     - result/*
+
+resources:
+- repo: self
+
+variables:
+  #Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: '4a07dd51-f36a-4b22-9149-4edf6339f683'
+  imageRepository: 'resultapp'
+  containerRegistry: 'dockersamplesacr.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/result/Dockerfile'
+  tag: '$(Build.BuildId)'
+
+pool:
+ name: 'azureagent'
+
+stages:
+- stage: Build
+  displayName: Build
+  jobs:
+  - job: Build
+    displayName: Build
+
+    steps:
+    - task: Docker@2
+      displayName: Build
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'build'
+        Dockerfile: 'result/Dockerfile'
+        tags: '$(tag)'
+
+- stage: push
+  displayName: push
+  jobs:
+  - job: push
+    displayName: push
+
+    steps:
+    - task: Docker@2
+      displayName: push the image
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'push'
+        tags: '$(tag)'
 
 
 
