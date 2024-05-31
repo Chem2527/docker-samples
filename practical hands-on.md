@@ -29,7 +29,7 @@ The package-lock.json file is automatically generated when you run npm install.
 
 server.js file is typically the entry point for your Node.js application. It contains the code to set up and start your server.
 
-##########################Dockerfile for result############################################
+# Dockerfile for result
 
 FROM node:18-slim
 
@@ -64,7 +64,7 @@ CMD ["node", "server.js"]
 note: its good if we place Dockerfile under root level of result microservice.
 
 ###########################################################################################################
-create a project (voting-application) and visiblity ---> private
+ create a project (voting-application) and visiblity ---> private
 import the code from github  to azure repos (https://github.com/Chem2527/docker-samples.git)
 
 we have two branches dummy,main intentionally i maked dummy as default branch so that we will learn how to set the default branch in azure repos.
@@ -78,8 +78,16 @@ Sai2024 - acr name - rg - cicd
 image name : votingapplication
 Dockerfile:   $(Build.SourcesDirectory)/result/Dockerfile
 
-error: 
-Failed to create an app in Microsoft Entra. Error: Insufficient privileges to complete the operation in Microsoft Graph Ensure that the user has permissions to create a Microsoft Entra Application.
+# Error: 
+Failed to create an app in Microsoft Entra. Error: Insufficient privileges to complete the operation in Microsoft Graph Ensure that the user has permissions to create a Microsoft Entra Application. ------> need to contact admin ask for enable for registring applications in azure AD.
+
+pull the code from github to azure repos.
+
+if someone make changes in the vote microservices then i want to trigger only vote pipeline.
+In order to implement this we need to follow path based triggering.
+
+dockerregistryServiceConnection: it integrates  acr with azuredevops.
+
 
 
 
