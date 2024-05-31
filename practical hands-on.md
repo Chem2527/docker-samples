@@ -88,6 +88,21 @@ In order to implement this we need to follow path based triggering.
 
 dockerregistryServiceConnection: it integrates  acr with azuredevops.
 
+# CI pipeline for result microservice 
+
+
+
+
+# error:
+
+
+There was a resource authorization issue: "The pipeline is not valid. Could not find a pool with name azureagent. The pool does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz. Could not find a pool with name azureagent. The pool does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz."
+
+need to create  agent(virtualmachine in our case) named azureagent in azure.
+
+# How to integrate azure vm with azuredevops pipelines
+
+
 
 
 
