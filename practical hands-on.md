@@ -64,6 +64,9 @@ There was a resource authorization issue: "The pipeline is not valid. Could not 
 need to create  agent(virtualmachine in our case) named azureagent in azure.
 
 # How to integrate azure vm with azuredevops pipelines
+configure agent on vm and once vm isable to listen the jobs we can run pipelines.
+# stages in ci pipeline
+trigger,resource,variables,steps,tasks
 
 
 
