@@ -26,4 +26,13 @@ if we run kubectl get pods -n < name of the namespace that we wanna deploy > we 
 az aks get-credentials az aks get-credentials --resource-group <name of rg where we created k8s cluster> --name <name of the cluster we created in azure>
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl get pods -n argocd
+
+# how to connect azure repos to argocd
+
+kubectl get secrets -n argocd
+
+kubectl edit secret argocd-initial-admin-secret -n argocd(shows the secret key for initial admin secret) #in my case: dEpMSEJoNXBtOEVmOWhxQg==
+
+
 
