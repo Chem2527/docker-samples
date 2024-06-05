@@ -1,4 +1,4 @@
-# CD with ArgoCD
+# CD with  k8s cluster & ArgoCD
 
 one we setup CI pipeline whenever there is change a  new image is pushed to acr and we will write shell script in such a way that
 it will automatically update the deployment,service manifests for vote,results and worker yaml files.
@@ -15,6 +15,9 @@ ArgoCD is a gitOps tool which continuosly monitors the source code.
 we have a new stage in CI i.e,( update which is under updatek8smanifests.sh  ) it is updating the k8s specification section i.e, deployment and service manifest files for vote,worker,results services.
 
 ArgoCD which is continuosly monitoring the k8s specifications identifies the changes in the deployment and yaml files and it deploys the latest changes to k8s cluster.
+
+create a k8s cluster in azure enable p.IP of nodepools and configure nodepools as per requirement.
+
 
 if we run kubectl get pods -n < name of the namespace that we wanna deploy > we can see that pods related to vote,result,worker are up and running.
 
