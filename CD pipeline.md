@@ -21,5 +21,6 @@ if we run kubectl get pods -n < name of the namespace that we wanna deploy > we 
 
 # log into aks cluster using below command
 az aks get-credentials az aks get-credentials --resource-group <name of rg where we created k8s cluster> --name <name of the cluster we created in azure>
-
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
