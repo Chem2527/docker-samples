@@ -37,6 +37,15 @@ for decoding the above key
 
 echo dEpMSEJoNXBtOEVmOWhxQg== | base64 --decode 
 
+kubectl get svc -n argocd
+look for argocd-server in above command and change the mode from clusterip to nodePort.
+kubectl edit svc argocd-server -n argocd -- change the type from  cluster ip to nodeport
+
+
+move to azure dashboard --> click on vmss --> instances --> network settings -- > add inbound rules 30626 which is https port mapped to 30626 --> now loginto argocd server using admin user and admin password.
+
+
+
 
 
 
