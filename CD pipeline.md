@@ -50,7 +50,7 @@ go to argocd server ---> settings ---> connect repo --- copy PAT from azure devo
 
 https://valeti321997@dev.azure.com/valeti321997/voting05/_git/voting05  ---> github url
 
-https://qn2ovuz253yo2w6wjbt2btupwkzg5lipl2oebk6wjefbej6jjgvq@dev.azure.com/valeti321997/voting05/_git/voting05 ---> after replacing PAT
+https://qn2ovuz253yo2w6wjbt2btupwkzg5lipl2ebk6wjefbej6jjgvq@dev.azure.com/valeti321997/voting05/_git/voting05 ---> after replacing PAT
 
 
 
