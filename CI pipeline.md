@@ -69,6 +69,9 @@ configure agent on vm and once vm isable to listen the jobs we can run pipelines
 trigger,resource,variables,steps,tasks
 
 
+we are adding extra stage in CI which is (update) where we are writing a shell script in such a way that it will update the manifests for all microservices under k8s-specifications.
+
+
 
 
 
