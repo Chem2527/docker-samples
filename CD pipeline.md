@@ -9,6 +9,9 @@ go to ---> vote microservice and replace cats,dogs with any other things in app.
 
 after commiting the code immediately ci/cd pipeline will trigger (build(creation of docker image),push the docker image to acr and argocd deploys the image to k8s cluster).
 
+
+ArgoCD is a gitOps tool which continuosly monitors the source code.
+
 we have a new stage in CI i.e,( update which is under updatek8smanifests.sh  ) it is updating the k8s specification section i.e, deployment and service manifest files for vote,worker,results services.
 
 ArgoCD which is continuosly monitoring the k8s specifications identifies the changes in the deployment and yaml files and it deploys the latest changes to k8s cluster.
