@@ -33,6 +33,10 @@ kubectl get pods -n argocd
 kubectl get secrets -n argocd
 
 kubectl edit secret argocd-initial-admin-secret -n argocd(shows the secret key for initial admin secret) #in my case: dEpMSEJoNXBtOEVmOWhxQg==
+for decoding the above key
+
+echo dEpMSEJoNXBtOEVmOWhxQg== | base64 --decode 
+
 
 
 
