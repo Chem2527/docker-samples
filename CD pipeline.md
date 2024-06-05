@@ -44,6 +44,14 @@ kubectl edit svc argocd-server -n argocd -- change the type from  cluster ip to 
 
 move to azure dashboard --> click on vmss --> instances --> network settings -- > add inbound rules 30626 which is https port mapped to 30626 --> now loginto argocd server using admin user and admin password.
 
+# How to connect ArgoCd with azure repos
+
+go to argocd server ---> settings ---> connect repo --- copy PAT from azure devops and under repo url provide replace pat with user name
+
+https://valeti321997@dev.azure.com/valeti321997/voting05/_git/voting05  ---> github url
+
+https://qn2ovuz253yo2w6wjbt2btupwkzg5lipl2oebk6wjefbej6jjgvq@dev.azure.com/valeti321997/voting05/_git/voting05 ---> after replacing PAT
+
 
 
 
