@@ -52,6 +52,8 @@ https://valeti321997@dev.azure.com/valeti321997/voting05/_git/voting05  ---> git
 
 https://qn2ovuz253yo2w6wjbt2btupwkzg5lipl2ebk6wjefbej6jjgvq@dev.azure.com/valeti321997/voting05/_git/voting05 ---> after replacing PAT
 
+create an application in argo server and mention the path (to which path argoserver has to look for if any changes)
+
 
 
 
