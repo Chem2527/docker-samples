@@ -19,7 +19,7 @@ ArgoCD which is continuosly monitoring the k8s specifications identifies the cha
 if we run kubectl get pods -n < name of the namespace that we wanna deploy > we can see that pods related to vote,result,worker are up and running.
 
 
-# log into aks cluster usimg below command
+# log into aks cluster using below command
 az aks get-credentials az aks get-credentials --resource-group <name of rg where we created k8s cluster> --name <name of the cluster we created in azure>
 
 
