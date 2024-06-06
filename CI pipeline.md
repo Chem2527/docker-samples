@@ -69,6 +69,9 @@ trigger,resource,variables,steps,tasks
 we are adding extra stage in CI which is (update) where we are writing a shell script in such a way that it will update the manifests for all microservices under k8s-specifications.
 
 ## How to write  a shell script in such a way that it will automatically  update the source code with latest image.
+whenever CI is implemented registry(acr) name is constant,repo name is constant and the only variable is tag which is build number.
+
+
 
 
 
