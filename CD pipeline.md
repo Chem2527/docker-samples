@@ -57,5 +57,3 @@ create an application in argo server and mention the path (to which path argoser
 
 
 
-
-
