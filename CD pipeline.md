@@ -42,17 +42,17 @@ look for argocd-server in above command and change the mode from clusterip to no
 kubectl edit svc argocd-server -n argocd -- change the type from  cluster ip to nodeport
 
 
-move to azure dashboard --> click on vmss --> instances --> network settings -- > add inbound rules 30626 which is https port mapped to 30626 --> now loginto argocd server using admin user and admin password.
+move to azure dashboard --> click on vmss --> instances --> network settings -- > add inbound rules NodePort port(external ip) --> now loginto argocd server using admin user and admin password.
 
 # How to connect ArgoCd with azure repos
 
 go to argocd server ---> settings ---> connect repo --- copy PAT from azure devops and under repo url provide replace pat with user name
 
-https://valeti321997@dev.azure.com/valeti321997/voting05/_git/voting05  ---> github url
+https://valeti321997@dev.azure.com/valeti321997/voting05/_git/voting05  --->  before replacing PAT  ---> url for azure repo
 
 https://qn2ovuz253yo2w6wjbt2btupwkzg5lipl2ebk6wjefbej6jjgvq@dev.azure.com/valeti321997/voting05/_git/voting05 ---> after replacing PAT
 
-create an application in argo server and mention the path (to which path argoserver has to look for if any changes)
+create an application in argo server and mention the path (to which path argoserver has to look for in azure repo if any changes)
 
 
 
